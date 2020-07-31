@@ -1,0 +1,143 @@
+/* GENERAL STYLES */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  padding-top: 100px;
+  font-family: "Roboto", sans-serif;
+  background-color: #28292b;
+  background-image: url(../images/dark_wood.png);
+  color: white;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+  border-bottom: 1px solid #a4a7ac;
+  padding-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 32px;
+  padding-bottom: 1rem;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+b {
+  font-weight: bold;
+}
+
+.main {
+  padding-bottom: 200px;
+}
+
+/* HEADER AND NAVIGATION */
+.nav-custom {
+  background-color: #080808;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #fff;
+}
+
+.navbar-nav .dropdown-menu {
+  position: absolute;
+}
+.navbar-nav p {
+  color: #fff;
+  display: inline;
+}
+
+.navbar .dropdown-menu .form-control {
+  width: 200px;
+}
+
+/* CV */
+.about div {
+  padding: 50px, 50px, 50px, 50px;
+}
+.about .contact-info {
+  text-align: right;
+}
+.about a {
+  color: white;
+}
+
+.contact-info {
+  text-transform: uppercase;
+  color: #a4a7ac;
+  font-size: 16px;
+}
+
+.about-text {
+  /* border-left: 1px solid #a4a7ac; */
+}
+
+.progress {
+  margin: 0 0 27px;
+  background: #46484c;
+  height: 43px;
+}
+
+.progress-bar {
+  text-align: left;
+  background: #50af6f;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  padding: 0 0 0 20px;
+}
+
+/* PORTFOLIO */
+.thumbnail {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 20px 0 0;
+}
+
+.caption {
+  position: absolute;
+  /*background:rgba(22, 22, 22, 0.5);*/
+  color: #fff;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 5px black, 0 0 5px black, 0 0 5px black, 0 0 5px black;
+}
+
+.bg-games {
+  background-image: url(../images/keyboard_desktop.jpg);
+  height: 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* FOOTER */
+.footer {
+  background: #1d1d1d;
+}
+.footer p {
+  margin-bottom: 0;
+  line-height: 2rem;
+}
+.footer .contact-info {
+  text-align: center;
+  padding: 1rem;
+}
+.footer a {
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

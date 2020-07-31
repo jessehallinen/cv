@@ -1,0 +1,27 @@
+@use "sass:map";
+@use "sass:color";
+
+$palettes: (
+    'green': (
+        'base':    rgb(0, 145, 19),
+        'light':   rgb(90, 207, 106)
+    )
+);
+
+@function color($color, $tone, $alpha:1){
+    @if map-has-key($palettes, $color){
+        $color: map-get($palettes, $color);
+    
+        @if map-has-key($color, $tone){
+            $tone: map-get($color, $tone);
+            @return color.change($tone, $alpha:$alpha);
+        }
+
+        @warn "unknown tone `#{$tone}` in color";
+        @return null;        
+    }
+
+    @warn "unknown color `#{$color}` in palette";
+    @return null;
+   
+}

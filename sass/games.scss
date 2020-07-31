@@ -1,0 +1,25 @@
+.row {
+    margin-top: 50px;
+}
+
+.caption-row {
+    margin-top: 0;
+}
+
+.row ul {
+    margin: 0;
+}
+
+.row .order-md-1 {
+    text-align: right;
+}
+
+@media only screen and (max-width: 768px) {
+    .container h3 {
+        margin-top: 20px;
+    }
+
+    .row .order-md-1 {
+        text-align: left;
+    }
+}

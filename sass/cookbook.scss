@@ -1,0 +1,213 @@
+@import 'common.scss';
+
+/* COOKBOOK */
+.bg-cookbook {
+    background-image: url(../images/knife_on_table_desktop.jpg);
+    height: 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.caption-bar {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+}
+
+.text-cookbook {
+    border-radius: 25px;
+    border: 3px solid #ffffff;
+    background-color: color('green', 'base', 0.8);
+    padding: 1rem;
+
+    h1 {
+        border-bottom: 1px solid #fff;
+    }
+}
+
+#add-new-recipe {
+    border-radius: 25px;
+    border: 3px solid #ffffff;
+    background-color: color('green', 'base', 0.8);
+    padding: 0.5rem;
+    color: #ffffff;
+    margin-top: 1rem;
+
+    .fa-plus {
+        padding: 0.2rem 0.2rem 0.2rem 0.5rem;
+    }
+}
+
+#new-recipe {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    border: 3px solid color('green', 'base');
+    background-color: white;
+    padding: 3.5rem 1rem 1rem 1rem;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 75px;
+    bottom: 20px;
+    color: rgb(0, 0, 0);
+
+    #recipe-img {
+        height: auto;
+    }
+
+    #recipe-img-preview {
+        padding-bottom: 0.5rem;
+    }
+
+    .ingr .close {
+        padding-left: 0.5rem;
+    }
+
+    .typeahead li.active {
+        color:green;
+    }
+}
+
+.new-recipe-inner {
+    overflow-y: scroll;
+    height: 100%;
+    padding-right: 0.5rem;
+
+    .col-sm-3 {
+        max-width: 25%;
+    }
+}
+
+#new-recipe-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+
+#new-recipe-close {
+    font-size: 2.5rem;
+    background-color: color('green', 'base');
+    padding: 0.2rem 0.8rem;
+    color: white;
+    opacity: 1;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+.submit-btn {
+    /* position: absolute; */
+    bottom: 0;
+    right: 0;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#add-ingredient {
+    border-radius: 20px;
+    border: 3px solid #ffffff;
+    background-color: color('green', 'base');
+    color: #ffffff;
+    padding: 0.25rem 0.75rem;
+}
+
+.btn .plus-sign {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.card {
+    color: black;
+    display: inline-block;
+    max-width: 100%;
+
+    .card-title button {
+        float: right;
+    }
+
+    li {
+        border: none;
+        padding: 0.33rem 0.33rem;
+    }
+
+    .show-recipe, .hide-recipe {
+        display: block;
+    }
+
+    .fa-angle-down, .fa-angle-up {
+        padding: 0.2rem 0.2rem 0.2rem 0.5rem;
+    }
+
+    .recipe-body {
+        padding-top: 0.5rem;
+
+        td {
+            border-top: none;
+            padding: 0.3rem;
+        }
+    }
+}
+
+.card-title {
+    border-bottom: 1px solid rgb(99, 99, 99);
+    padding-bottom: 0.75rem;
+}
+
+.ingredients li {
+    padding: 0 0.33rem;
+
+    span {
+        padding-left: 1rem;
+    }
+}
+
+#recipes {
+    .card-columns {
+        column-count: 1;
+        min-width: 100%;
+        max-width: 100%;
+        padding: 0.5rem;
+        
+        // Small devices (landscape phones, 576px and up)
+        @media (min-width: 576px) {
+            min-width: 100%;
+            max-width: 100%;
+        }
+
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) {
+            min-width: 50%;
+            max-width: 50%;
+        }
+
+        // Large devices (desktops, 992px and up)
+        @media (min-width: 992px) {
+            min-width: 33.33333%;
+            max-width: 33.33333%;
+        }
+
+        // Extra large devices (large desktops, 1200px and up)
+        @media (min-width: 1200px) {
+            min-width: 25%;
+            max-width: 25%;
+        } 
+    }
+
+    table {
+        table-layout: fixed;
+        word-wrap: break-word;
+    }
+
+    td {
+        border: none;
+    }
+}
