@@ -1,7 +1,6 @@
 <?php
 require_once('functions.php');
 require_once('db_functions/common_functions.php');
-handleInfoMessage();
 ?>
 <!DOCTYPE html>
 <html lang="fi">
@@ -63,7 +62,9 @@ handleInfoMessage();
             <div class="row caption-bar">
                 <div class="col-12 text-cookbook">
                     <h1>Keittokirja</h1>
-                    <p>Tämä sivu toimii esimerkkinä web-teknologiaosaamisestani. Sivu on tehty käyttäen seuraavia teknologioita: JavaScript, PHP, jQuery, MySQL, CSS(SASS), HTML. Kaikki lähdekoodit löytyvät githubista: </p>
+                    <p>Tämä sivu toimii esimerkkinä web-teknologiaosaamisestani. Sivu on tehty käyttäen seuraavia teknologioita: 
+                        JavaScript, PHP, jQuery, MySQL, CSS(SASS), HTML. Kaikki lähdekoodit löytyvät githubista:
+                        <a href="https://github.com/jessehallinen/cv">https://github.com/jessehallinen/cv.</a></p>
                 </div>
             </div>
             <div class="row">
@@ -83,5 +84,6 @@ handleInfoMessage();
         </script>    
         <script src="cookbook.js<?php echo '?v=' . filemtime('cookbook.js'); ?>"></script>
         <?php require_once('footer.html') ?>
+        <?php handleInfoMessage(); ?>
     </body>
 </html>

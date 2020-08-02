@@ -22,6 +22,9 @@
 .text-cookbook h1 {
   border-bottom: 1px solid #fff;
 }
+.text-cookbook a {
+  color: black;
+}
 
 #add-new-recipe {
   border-radius: 25px;

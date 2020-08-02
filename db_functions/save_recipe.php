@@ -3,11 +3,23 @@ session_start();
 require_once('sql_connection.php');
 $msg = "";
 
+function redirect() {
+	global $msg;
+	$_SESSION['message'] = $msg;
+	if(isset($_GET['goto'])) {
+		header('Location: ' . htmlspecialchars($_GET['goto']));
+	}
+	else {
+		header('Location: ../cookbook.php');
+	}
+	die;
+}
+
 if (isset($_SESSION['loggedin'])) {
 	try {
 		if(!isset($_POST['recipe-name'], $_POST['recipe-desc'], $_POST['recipe-inst'], $_POST['recipe-ingr'])) {
 			$msg .= "Täytä reseptistä tarvittavat kentät.";
-			die;
+			redirect();
 		}
 
 		// Better to use transactions to prevent ingredients missing from recipes if something goes wrong.
@@ -109,11 +121,5 @@ if (isset($_SESSION['loggedin'])) {
 	}
 }
 
-if(isset($_GET['goto'])) {
-    header('Location: ' . htmlspecialchars($_GET['goto']));
-}
-else {
-    header('Location: ../cookbook.php');
-}
-die;
+redirect();
 ?>

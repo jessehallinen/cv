@@ -3,12 +3,14 @@ require_once('functions.php');
 ?>
 <!DOCTYPE html>
 <html lang="fi">
-    <?php
-    // Override page variables here when using multiple pages
-    $pageTitle = 'Portfolio';
-    $pageDescription = 'Portfolio - Jesse Hallinen.';
-    require_once('head.php'); 
-    ?>
+    <head>
+        <?php
+        // Override page variables here when using multiple pages
+        $pageTitle = 'Portfolio';
+        $pageDescription = 'Portfolio - Jesse Hallinen.';
+        require_once('head.php'); 
+        ?>
+    </head>
     <body>
         <?php require_once('header.php') ?>
 
@@ -47,5 +49,6 @@ require_once('functions.php');
 
         <?php require_once('javascript.php'); ?>
         <?php require_once('footer.html') ?>
+        <?php handleInfoMessage(); ?>
     </body>
 </html>

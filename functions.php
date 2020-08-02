@@ -11,7 +11,7 @@ function echoActiveIfRequestMatches($requestUri)
 
 function handleInfoMessage() {
     if (isset($_SESSION['message'])){
-        echo '<script> alert("' . $_SESSION['message'] . '") </script>';
+        echo '<script> alert("' . $_SESSION['message'] . '"); </script>';
         resetMessage();
     }
 }
